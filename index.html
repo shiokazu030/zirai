@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>恋愛地雷タイプ診断 | 16タイプでわかる恋の面倒くささ</title>
+    <meta name="description" content="好きになると、ちょっとだけ面倒くさくなる。あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断します。">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="恋愛地雷タイプ診断">
+    <meta property="og:description" content="あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断。結果カードはスクショ推奨。">
+    <meta property="og:image" content="./assets/ogp.png">
+    <meta property="og:site_name" content="恋愛地雷タイプ診断">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#ff5aa9">
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="screen screen-home is-active" id="homeScreen" aria-labelledby="siteTitle">
+        <div class="hero-frame">
+          <div class="sticker sticker-bow">RIBBON</div>
+          <div class="sticker sticker-risk">LOVE BUG</div>
+          <div class="sparkle-field" aria-hidden="true"></div>
+          <p class="eyebrow">16 LOVE LANDMINE TYPES</p>
+          <h1 id="siteTitle">恋愛地雷<br>タイプ診断</h1>
+          <p class="lead">
+            好きになると、ちょっとだけ面倒くさくなる。<br>
+            返信を待ちすぎたり、試したくなったり、平気なフリをしたり。<br>
+            この診断では、あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断します。
+          </p>
+          <p class="note">※これはネタ診断です。結果が刺さっても怒らないでください。</p>
+          <button class="primary-button" id="startButton" type="button">
+            <span>診断開始</span>
+            <b>16問</b>
+          </button>
+          <button class="catalog-link" id="catalogButton" type="button">16タイプ一覧を見る</button>
+        </div>
+      </section>
+
+      <section class="screen screen-catalog" id="catalogScreen" aria-labelledby="typeCatalogTitle">
+        <section class="type-catalog" id="typeCatalog">
+          <div class="catalog-actions">
+            <button class="ghost-button" id="catalogBackButton" type="button">トップへ</button>
+            <button class="ghost-button" id="catalogStartButton" type="button">診断開始</button>
+          </div>
+          <div class="section-head">
+            <p class="eyebrow">ALL TYPES</p>
+            <h2 id="typeCatalogTitle">恋愛地雷<br>16タイプ一覧</h2>
+          </div>
+          <div class="catalog-grid" id="catalogGrid"></div>
+        </section>
+      </section>
+
+      <section class="screen screen-quiz" id="quizScreen" aria-labelledby="questionTitle">
+        <div class="quiz-head">
+          <div>
+            <p class="counter" id="counterText">Q1 / 16</p>
+            <h2 id="questionTitle"></h2>
+          </div>
+          <button class="ghost-button" id="backButton" type="button" aria-label="1つ前の質問に戻る">戻る</button>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="answers" id="answers"></div>
+      </section>
+
+      <section class="screen screen-result" id="resultScreen" aria-labelledby="resultType">
+        <div class="result-actions top-actions">
+          <button class="ghost-button" id="retryTopButton" type="button">もう一回</button>
+          <button class="ghost-button" id="saveTopButton" type="button">画像保存</button>
+        </div>
+
+        <article class="result-card" id="resultCard">
+          <div class="card-noise" aria-hidden="true"></div>
+          <div class="card-top">
+            <span class="card-label">LOVE LANDMINE REPORT</span>
+            <span class="card-id" id="resultNumber">TYPE 00</span>
+          </div>
+          <div class="type-ribbon">診断結果</div>
+          <div class="type-art" id="resultArt" aria-hidden="true"></div>
+          <h2 id="resultType"></h2>
+          <p class="catch" id="resultCatch"></p>
+
+          <div class="danger-wrap">
+            <div class="danger-main">
+              <span>地雷度</span>
+              <strong id="dangerScore"></strong>
+            </div>
+            <div class="danger-bar"><i id="dangerFill"></i></div>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat"><span>恋愛依存度</span><b id="statDepend"></b></div>
+            <div class="stat"><span>沼らせ力</span><b id="statCharm"></b></div>
+            <div class="stat"><span>自爆しやすさ</span><b id="statCrash"></b></div>
+            <div class="stat"><span>本命力</span><b id="statMain"></b></div>
+          </div>
+
+          <div class="summary-box">
+            <h3>あなたの恋愛地雷</h3>
+            <p id="landmineText"></p>
+          </div>
+
+          <div class="detail-grid">
+            <section>
+              <h3>沼らせポイント</h3>
+              <p id="charmText"></p>
+            </section>
+            <section>
+              <h3>残念ポイント</h3>
+              <p id="weakText"></p>
+            </section>
+          </div>
+
+          <blockquote id="quoteText"></blockquote>
+
+          <div class="avoid-box">
+            <h3>やめた方がいい行動</h3>
+            <p id="avoidText"></p>
+          </div>
+
+          <div class="compat">
+            <div>
+              <h3>相性がいいTOP3</h3>
+              <ol id="goodList"></ol>
+            </div>
+            <div>
+              <h3>相性が悪いTOP3</h3>
+              <ol id="badList"></ol>
+            </div>
+          </div>
+        </article>
+
+        <div class="result-actions">
+          <button class="primary-button share" id="shareButton" type="button">Xでシェア</button>
+          <button class="primary-button save" id="saveButton" type="button">結果画像を保存</button>
+          <button class="ghost-button wide" id="retryButton" type="button">もう一回診断</button>
+        </div>
+        <canvas id="saveCanvas" width="1080" height="1600" hidden></canvas>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
