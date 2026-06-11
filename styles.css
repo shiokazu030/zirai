@@ -86,8 +86,9 @@ button {
   padding: 34px 20px 22px;
   border-radius: 18px;
   background:
-    linear-gradient(145deg, rgba(255, 248, 252, .98), rgba(255, 215, 234, .94) 48%, rgba(255, 90, 169, .92)),
-    url("./assets/ogp.png") center bottom / 160% auto no-repeat;
+    radial-gradient(circle at 78% 74%, rgba(255, 35, 126, .24) 0 58px, transparent 60px),
+    radial-gradient(circle at 8% 78%, rgba(255, 240, 102, .18) 0 44px, transparent 46px),
+    linear-gradient(145deg, rgba(255, 248, 252, .98), rgba(255, 215, 234, .96) 48%, rgba(255, 90, 169, .92));
   color: var(--ink);
 }
 
