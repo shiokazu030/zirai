@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>恋愛地雷タイプ診断 | 16タイプでわかる恋の面倒くささ</title>
-    <meta name="description" content="好きになると、ちょっとだけ面倒くさくなる。あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断します。">
+    <title>恋愛地雷タイプ診断｜好きになると出るあなたの面倒くさい本性</title>
+    <meta name="description" content="返信待ちで病む、試し行動する、平気なフリで壊れる。恋愛中に出るあなたの地雷を16タイプで診断。">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="恋愛地雷タイプ診断">
-    <meta property="og:description" content="あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断。結果カードはスクショ推奨。">
+    <meta property="og:title" content="恋愛地雷タイプ診断｜好きになると出るあなたの面倒くさい本性">
+    <meta property="og:description" content="返信待ちで病む、試し行動する、平気なフリで壊れる。恋愛中に出るあなたの地雷を16タイプで診断。">
     <meta property="og:image" content="./assets/ogp.png">
     <meta property="og:site_name" content="恋愛地雷タイプ診断">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,16 +24,24 @@
           <div class="sparkle-field" aria-hidden="true"></div>
           <p class="eyebrow">16 LOVE LANDMINE TYPES</p>
           <h1 id="siteTitle">恋愛地雷<br>タイプ診断</h1>
+          <p class="subcopy">16タイプで暴かれる、好きな人の前でだけ出るあなたのバグ。</p>
           <p class="lead">
-            好きになると、ちょっとだけ面倒くさくなる。<br>
-            返信を待ちすぎたり、試したくなったり、平気なフリをしたり。<br>
-            この診断では、あなたの恋愛中に出やすい“地雷タイプ”を16タイプで診断します。
+            好きになると、急に自分でも引くくらい面倒くさくなる。<br>
+            返信速度で病む。<br>
+            試し行動する。<br>
+            平気なフリして、あとで勝手に壊れる。<br><br>
+            この診断では、あなたの恋愛中に出る“地雷タイプ”を16タイプで診断します。
           </p>
-          <p class="note">※これはネタ診断です。結果が刺さっても怒らないでください。</p>
+          <div class="type-peek" aria-labelledby="peekTitle">
+            <h2 id="peekTitle">たとえば、こんな地雷。</h2>
+            <div class="peek-grid" id="peekGrid"></div>
+            <p class="peek-question">あなたはどれ？</p>
+          </div>
           <button class="primary-button" id="startButton" type="button">
-            <span>診断開始</span>
+            <span>自分の地雷タイプを診断する</span>
             <b>16問</b>
           </button>
+          <p class="note">※これはネタ診断です。結果が刺さっても怒らないでください。</p>
           <button class="catalog-link" id="catalogButton" type="button">16タイプ一覧を見る</button>
         </div>
       </section>
@@ -42,7 +50,7 @@
         <section class="type-catalog" id="typeCatalog">
           <div class="catalog-actions">
             <button class="ghost-button" id="catalogBackButton" type="button">トップへ</button>
-            <button class="ghost-button" id="catalogStartButton" type="button">診断開始</button>
+            <button class="ghost-button" id="catalogStartButton" type="button">診断する</button>
           </div>
           <div class="section-head">
             <p class="eyebrow">ALL TYPES</p>
@@ -98,6 +106,8 @@
             <div class="stat"><span>本命力</span><b id="statMain"></b></div>
           </div>
 
+          <blockquote id="quoteText"></blockquote>
+
           <div class="summary-box">
             <h3>あなたの恋愛地雷</h3>
             <p id="landmineText"></p>
@@ -113,8 +123,6 @@
               <p id="weakText"></p>
             </section>
           </div>
-
-          <blockquote id="quoteText"></blockquote>
 
           <div class="avoid-box">
             <h3>やめた方がいい行動</h3>
@@ -134,6 +142,7 @@
         </article>
 
         <div class="result-actions">
+          <p class="share-lead">結果を貼って、同じ地雷タイプの人を探す</p>
           <button class="primary-button share" id="shareButton" type="button">Xでシェア</button>
           <button class="primary-button save" id="saveButton" type="button">結果画像を保存</button>
           <button class="ghost-button wide" id="retryButton" type="button">もう一回診断</button>
